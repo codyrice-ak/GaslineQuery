@@ -1,4 +1,4 @@
-from langchain_chroma import Chroma
+from langchain.chains.chroma import Chroma  # Corrected import
 from langchain_ollama.embeddings import OllamaEmbeddings
 from langchain_ollama.llms import OllamaLLM
 import streamlit as st
@@ -28,12 +28,12 @@ def initialize_components():
         st.stop()
 
 def main():
-    st.title("Alaska Gas Pipeline Data")
+    st.title("Pipeline Investment Analyzer")
     
     # Initialize components once
     llm, retriever = initialize_components()
     
-    query = st.text_input("Ask the LB&A database about the Alaska Gas Pipeline:")
+    query = st.text_input("Ask about pipeline ROI or peer comparisons:")
     if query:
         with st.spinner("Analyzing pipeline documents..."):
             try:
@@ -56,7 +56,7 @@ def main():
 
                 Format answer with:
                 1. Numerical values first (if available)
-                2. Peer project comparisons (if available)
+                2. Peer project comparisons
                 3. Source citations (Source: [Title], P[Page], [Year])
                 """
                 
