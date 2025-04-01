@@ -1,0 +1,5 @@
+streamlit==1.35.0
+langchain-core==0.3.49
+langchain-ollama==0.3.0
+ollama==0.4.7
+langchain-chroma==0.3.0
