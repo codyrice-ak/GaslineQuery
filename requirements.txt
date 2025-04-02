@@ -1,8 +1,8 @@
 streamlit==1.37.1
 langchain-core==0.3.20
-langchain-ollama==0.6.0
-ollama==0.6.0
-langchain-chroma==0.3.0
+langchain-ollama==0.3.0
+ollama==0.4.7
+langchain-chroma==0.2.2
 pydantic>=2.10
 numpy>=1.21
 pygments==2.19.1
